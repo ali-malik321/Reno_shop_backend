@@ -8,7 +8,7 @@ const productSchema = Schema(
 		category: { type: Schema.Types.ObjectId, ref: 'Category' },
 		size: [{ type: Schema.Types.ObjectId, ref: 'Size' }],
 		price: { type: Number, required: true },
-		images: { type: Array },
+		images: { type: Array, required: false },
 		inStock: { type: Boolean, default: false },
 	},
 	{ timestamps: true }
