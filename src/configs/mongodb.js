@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
-const MONGO_URLS='mongodb+srv://snexus:snexus123@cluster0.sldwufz.mongodb.net/?retryWrites=true&w=majority'
+// const MONGO_URLS='mongodb+srv://snexus:snexus123@cluster0.sldwufz.mongodb.net/?retryWrites=true&w=majority'
 
 
 const connectDB = async (req, res) => {
 	try {
-		const conn = mongoose.connect(MONGO_URLS, {
+		const conn = mongoose.connect(process.env.MONGODB_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		})
