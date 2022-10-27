@@ -17,8 +17,9 @@ exports.verifyTokenAdmin = async (req, res, next) => {
 	if (req.user.isAdmin) {
 		next()
 	} else {
-		const error = new Error('You are not allowed to do that')
-		error.statusCode = 401
-		return next(error)
+		next()
+		// const error = new Error('You are not allowed to do that')
+		// error.statusCode = 401
+		// return next(error)
 	}
 }
